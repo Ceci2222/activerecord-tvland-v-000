@@ -8,7 +8,9 @@ class Character < ActiveRecord::Base
   end
   
   def build_network(character)
+    actor = Actor.new(character.actor)
     actor.characters << character.actor
+    show = Show.new(character.show)
     show.characters << character.show
   end
 end
