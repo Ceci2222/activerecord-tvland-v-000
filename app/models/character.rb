@@ -7,7 +7,7 @@ class Character < ActiveRecord::Base
     "#{self.name} always says: #{self.catchphrase}"
   end
   
-  def build_network(character)
+  def build_network
     binding.pry
     actor = Actor.new(self.actor)
     actor.characters << self
