@@ -8,6 +8,7 @@ class Character < ActiveRecord::Base
   end
   
   def build_network(character)
+    binding.pry
     actor = Actor.new(self.actor)
     actor.characters << self
     show = Show.new(self.show)
