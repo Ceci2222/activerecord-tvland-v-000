@@ -1,4 +1,4 @@
-require 'pry'
+
 class Character < ActiveRecord::Base
   belongs_to :actor 
   belongs_to :show 
@@ -8,7 +8,6 @@ class Character < ActiveRecord::Base
   end
   
   def build_network
-    binding.pry
     actor = Actor.new(self.actor)
     actor.characters << self
     show = Show.new(self.show)
