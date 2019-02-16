@@ -1,3 +1,4 @@
+require 'pry'
 class Character < ActiveRecord::Base
   belongs_to :actor 
   belongs_to :show 
@@ -7,5 +8,6 @@ class Character < ActiveRecord::Base
   end
   
   def build_network
-    
+    binding.pry
+  end
 end
