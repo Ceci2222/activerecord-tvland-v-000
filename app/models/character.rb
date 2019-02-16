@@ -7,10 +7,10 @@ class Character < ActiveRecord::Base
     "#{self.name} always says: #{self.catchphrase}"
   end
   
-  def build_network(character)
-    actor = Actor.new(character.actor)
-    actor.characters << character.actor
-    show = Show.new(character.show)
-    show.characters << character.show
+  def build_network
+    actor = Actor.new(self.actor)
+    actor.characters << self
+    show = Show.new(self.show)
+    show.characters << self
   end
 end
